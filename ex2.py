@@ -1,5 +1,4 @@
 #reversed user's first and last name
-
 def rev(x): #the required function, x represents a string 
     st = x.split(" ") #splitting the string (x) into list (data items)
     r = reversed(st) #changing the items order as requested in the question
