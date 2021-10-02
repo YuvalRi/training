@@ -1,10 +1,11 @@
 #sum of three given numbers, if they are equal then we will get three times of their sum 
 if __name__ == "__main__":
-    x = int(input("please insert a number: "))
-    y = int(input("please insert a number: "))
-    z = int(input("please insert a number: "))
+    lst = [] 
+    for i in range(3):
+        x = int(input("please insert a number: "))
+        lst.append(x)
 
-if x == y == z:
-    print(3*(x+y+z))
+if  lst[0] == lst[1] == lst[2]:
+    print(9*x)
 else:
-    print(x+y+z)
+    print(sum(lst))
