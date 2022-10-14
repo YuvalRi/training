@@ -1,8 +1,15 @@
-#input: list of integers, output: minimum element of that list 
-def min (lst): #required function
-    lst.sort() #sorting the given list (increased order) and then extracting the element in the first index
-    return lst[0]
+# ex 2
+
+def smallestElement(lst):
+    '''
+    function that recieves a list of integers and returns its smallest element
+    '''
+    smallest = lst[0]
+    for i in lst:
+        if i < smallest:
+            smallest = i
+    return smallest
+
 
 if __name__ == "__main__":
-    lst2 = [5,2,3,4,1] #example
-    print(min(lst2))
+    print(smallestElement([-1, -5, -99, 100, -1500]))
