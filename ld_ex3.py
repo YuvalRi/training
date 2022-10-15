@@ -1,18 +1,32 @@
-def checkLen(str):
-    return len(str) > 2
+# ex 3
 
-def func2(str):
-    """
-    The function checks if the last character equals to the first
-    """
-    return str != "" and str[0] == str[-1]
-    
-if __name__ == "__main__":
+def checkLen(s: str):
+    '''
+    A function which checks if the given string is larger than 2
+    '''
+    if len(s) > 2:
+        return True
+
+
+def firstandLast(s: str):
+    '''
+    A function which checks if both first and last characters are the same
+    '''
+    if s != "" and s[0] == s[-1]:
+        return True
+
+
+def numofString(lst: list):
+    '''
+    A function which returns the number of string which follows the conditions above
+    '''
     counter = 0
-    lst = ["", "aa", "Yuval", "11", "1451", "OfekO"]
     for i in lst:
-        if func2(i) and checkLen(i): 
+        if checkLen(i) and firstandLast(i):
             counter = counter + 1
     print(counter)
 
 
+if __name__ == "__main__":
+    lst = ["", "aa", "Yuval", "11", "1451", "OfekO", "LocaL"]
+    numofString(lst)
