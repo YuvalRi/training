@@ -1,5 +1,3 @@
-import math
-
 # ex 8
 
 
@@ -17,19 +15,16 @@ def freqDict(s: str):
 
 
 def createdFrom(dict: dict, s: str):
-    lst = []
+    '''
+    A function which returns True if the received string can be created from
+    the characters available in the given dictionary and False otherwise
+    '''
     for c in s:
-        lst.append(c)
-    new_lst = lst.copy()
-    for s in lst:
-        if s in dict.keys() and dict[s] > 0:
-            dict[s] = dict[s] - 1
-            t = new_lst.index(s)
-            new_lst.pop(t)
-    if len(new_lst) == 0:
-        return True
-    else:
-        return False
+        if c not in dict.keys() or dict[c] == 0:
+            return False
+        else:
+            dict[c] -= 1
+    return True
 
 
 if __name__ == "__main__":
