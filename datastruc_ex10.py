@@ -18,7 +18,6 @@ def cyclicShift(str1: str, str2: str):
     A function which recieves 2 strings and returns
     True is str2 is a "cyclic shift" of str1 and False otherwise
     '''
-    temp = ''
     if freqDict(str1) != freqDict(str2):
         return False
     temp = str1 + str1
