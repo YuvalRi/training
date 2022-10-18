@@ -1,9 +1,5 @@
 # ex 9
 
-
-from os import lstat
-
-
 def dimenstionaList(m: int, n: int):
     '''
     A function which recieves 2 integers
@@ -20,7 +16,7 @@ def dimenstionaList(m: int, n: int):
 
 
 if __name__ == "__main__":
-    print(dimenstionaList(4, 5), end=" \n")
-    #dimenstionaList(4, 4)
-    #dimenstionaList(2, 3)
+    print(dimenstionaList(4, 5))
+    print(dimenstionaList(18, 5))
+    print(dimenstionaList(2, 3))
 
