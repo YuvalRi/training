@@ -12,7 +12,9 @@ def firstandLast(s: str):
     '''
     A function which checks if both first and last characters are the same
     '''
-    if s != "" and s[0] == s[-1]:
+    if len(s) == 0:
+        print("Error: the given string is empty!")
+    elif s[0] == s[-1]:
         return True
 
 
@@ -21,8 +23,8 @@ def numofString(lst: list):
     A function which returns the number of string which follows the conditions above
     '''
     counter = 0
-    for i in lst:
-        if checkLen(i) and firstandLast(i):
+    for st in lst:
+        if checkLen(st) and firstandLast(st):
             counter = counter + 1
     print(counter)
 
