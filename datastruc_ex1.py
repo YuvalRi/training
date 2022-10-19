@@ -2,11 +2,11 @@
 
 def elementSum(lst: list):
     '''
-    function that recieves a list and returns the sum of its elements
+    A function that recieves a list and returns the sum of its elements
     '''
     lst_sum = 0
     for i in range(len(lst)):
-        lst_sum = lst[i] + lst_sum
+        lst_sum += lst[i]
     return lst_sum
 
 
