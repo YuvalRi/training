@@ -1,43 +1,32 @@
 import random as rnd
+from datastruc_ex6 import *
 
 # ex7
 # a
 
 
-def func(n: int, random: bool, lst: list):
+def wordSelected(n: int, random: bool, lst: list):
+    '''
+    A function which returns selected words from the WordData.txt file
+    according to conditions explained in the exercise
+    '''
     with open('WordData.txt', 'r') as file:
         allText = file.read()
+        text_list = allText.split('\n')
+        selected_words = []
         if random:
-            text_list = allText.split('\n')
             randomlist = rnd.sample(range(0, len(text_list)), n)
-            selected_words = []
-            for i in range(len(randomlist)):
-                selected_words.append(text_list[randomlist[i]])
-            return selected_words
         else:
-            text_list = allText.split('\n')
-            selected_words = []
-            for i in range(len(lst)):
-                selected_words.append(text_list[lst[i]])
-            return selected_words
+            randomlist = lst
+        for i in range(len(randomlist)):
+            selected_words.append(text_list[randomlist[i]])
+        return selected_words
 
 
 # b
 
-def freqDict(s: str):
-    '''
-    A function which creates a frequency dictionary from a string
-    '''
-    all_freq = {}
-    for i in s:
-        if i in all_freq:
-            all_freq[i] += 1
-        else:
-            all_freq[i] = 1
-    return all_freq
 
-
-def freqFunc(lst: list):
+def fromLlistToString(lst: list):
     '''
     A function which convert list of strings to one string
     '''
@@ -54,26 +43,44 @@ def maxCharacter(dict: dict):
 
 
 def findMedian(dict: dict):
+    '''
+    A function which returns the median value of the given dictionary
+    '''
     new_lst = sorted(dict.values())
     if (len(new_lst)) % 2 == 0:
         med1 = new_lst[(len(new_lst))//2]
         med2 = new_lst[(len(new_lst))//2 - 1]
         med = (med1 + med2)/2
-        return med
     else:
         med = new_lst[(len(new_lst))//2]
-        return med
+    return med
+
+
+def finalFunction(n: int, random: bool, lst: list):
+    '''
+    A function which returns all required values
+    '''
+    a = wordSelected(n, random, lst)
+    b = fromLlistToString(a)
+    c = freqDict(b)
+    d = maxCharacter(c)
+    e = findMedian(c)
+    return c, d, e
 
 
 if __name__ == "__main__":
-    # in this case random = True
-    a = freqDict(freqFunc(func(7, True, lst=[1, 2, 3, 4, 5, 6, 7])))
-    print(a)
-    print(maxCharacter(a))
-    print(findMedian(a))
-    # in this case random = False
-    b = freqDict(freqFunc(func(5, False, lst=[1, 2, 3, 4, 5])))
-    print(b)
-    print(maxCharacter(b))
-    print(findMedian(b))
+    print(
+        "The frequency dictionary is:",
+        finalFunction(7, True, lst=[1, 2, 3, 4, 5, 6, 7])[0],
+        "\nThe most common character is:",
+        finalFunction(7, True, lst=[1, 2, 3, 4, 5, 6, 7])[1],
+        "\nThe median is:",
+        finalFunction(7, True, lst=[1, 2, 3, 4, 5, 6, 7])[2])
+    print(
+        "The frequency dictionary is:",
+        finalFunction(5, False, lst=[1, 2, 3, 4, 5, 6, 7])[0],
+        "\nThe most common character is:",
+        finalFunction(5, False, lst=[1, 2, 3, 4, 5, 6, 7])[1],
+        "\nThe median is:",
+        finalFunction(5, False, lst=[1, 2, 3, 4, 5, 6, 7])[2])
 
