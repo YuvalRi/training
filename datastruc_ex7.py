@@ -15,11 +15,11 @@ def wordSelected(n: int, random: bool, lst: list):
         text_list = allText.split('\n')
         selected_words = []
         if random:
-            randomlist = rnd.sample(range(0, len(text_list)), n)
+            new_lst = rnd.sample(range(0, len(text_list)), n)
         else:
-            randomlist = lst
-        for i in range(len(randomlist)):
-            selected_words.append(text_list[randomlist[i]])
+            new_lst = lst
+        for i in range(len(new_lst)):
+            selected_words.append(text_list[new_lst[i]])
         return selected_words
 
 
@@ -63,15 +63,13 @@ def dataFunction(n: int, rand: bool, lst: list):
     dictofreq = freqDict(fromListToString(wordSelected(n=n,
                                                        random=rand,
                                                        lst=lst)))
-    max_val = maxCharacter(dictofreq)
-    median_val = findMedian(dictofreq)
-    #print(f'The frequency dictionary is: {dictofreq}\
-    #\nThe most common character is: {max_val}\
-    #\nThe median value is: {median_val}')
-    print(
-        f'''The frequency dictionary is: {dictofreq}
-        The most common character is: {max_val}
-        The median value is: {median_val}''')
+    print(f'The frequency dictionary is: {dictofreq}\
+    \nThe most common character is: {maxCharacter(dictofreq)}\
+    \nThe median value is: {findMedian(dictofreq)}')
+    #print(
+        #f'''The frequency dictionary is: {dictofreq}
+        #The most common character is: {maxCharacter(dictofreq)}
+        #The median value is: {findMedian(dictofreq)}''')
 
 
 if __name__ == "__main__":
