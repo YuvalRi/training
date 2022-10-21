@@ -1,5 +1,6 @@
-# ex 8
 from datastruc_ex6 import freqDict
+
+# ex 8
 
 
 def createdFrom(dict: dict, s: str):
