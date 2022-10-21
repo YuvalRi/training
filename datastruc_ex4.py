@@ -1,5 +1,19 @@
 # ex 4
-# a
+# a - python program to concatenate following dictionaries to create a new one
+
+if __name__ == "__main__":
+    dic1 = {1: 10, 2: 20}
+    dic2 = {3: 30, 4: 40}
+    dic3 = {5: 50, 6: 60}
+    for key, value in dic2.items():
+        dic1[key] = value
+    for key, value in dic3.items():
+        dic1[key] = value
+    print(dic1)
+
+
+# b
+
 
 def mergeDict(dic_a, dic_b):
     '''
@@ -9,21 +23,14 @@ def mergeDict(dic_a, dic_b):
         dic_a[key] = value
     return dic_a
 
-
-if __name__ == "__main__":
-    dic1 = {1: 10, 2: 20}
-    dic2 = {3: 30, 4: 40}
-    dic3 = {5: 50, 6: 60}
-    mergeDict(dic_a=dic1, dic_b=dic2)
-    mergeDict(dic_a=dic1, dic_b=dic3)
-    print(dic1)
-
-# b
-
-# The function 'mergeDict' from the previous task is relevant
+# c
 
 
-def taskB(A, B):
+def taskC(A, B):
+    '''
+    A function which concatenate given dictionaries but under
+    the conditions explained in the exercise
+    '''
     for key in B:
         if key in A.keys():
             lst = [A[key], B[key]]
@@ -36,21 +43,25 @@ def taskB(A, B):
 if __name__ == "__main__":
     A = {1: 20, 2: 50}
     B = {1: 25, 3: 30}
-    print(taskB(A, B))
+    print(taskC(A, B))
 
-# c
-dic4 = {6: 60, 8: 80}
-dic5 = {"Ofek": "Yuval", "Gabri": "Avital"}
-mergeDict(dic_a=dic4, dic_b=dic5)
-if dic4 == {6: 60, 8: 80, "Ofek": "Yuval", "Gabri": "Avital"}:
-    print("Excellent!")
-else:
-    print("There is a problem!")
+# d - testing the functions above
 
-dic6 = {1: 30, 2: 40}
-dic7 = {2: 20, 1: 90}
-taskB(dic6, dic7)
-if dic6 == {1: [30, 90], 2: [40, 20]}:
-    print("Excellent!")
-else:
-    print("There is a problem!")
+
+if __name__ == "__main__":
+
+    dic4 = {6: 60, 8: 80}
+    dic5 = {"Ofek": "Yuval", "Gabri": "Avital"}
+    mergeDict(dic_a=dic4, dic_b=dic5)
+    if dic4 == {6: 60, 8: 80, "Ofek": "Yuval", "Gabri": "Avital"}:
+        print("Excellent!")
+    else:
+        print("There is a problem!")
+
+    dic6 = {1: 30, 2: 40}
+    dic7 = {2: 20, 1: 90}
+    taskC(dic6, dic7)
+    if dic6 == {1: [30, 90], 2: [40, 20]}:
+        print("Excellent!")
+    else:
+        print("There is a problem!")
