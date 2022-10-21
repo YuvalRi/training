@@ -1,5 +1,5 @@
 import random as rnd
-from datastruc_ex6 import *
+from datastruc_ex6 import freqDict
 
 # ex7
 # a
@@ -26,7 +26,7 @@ def wordSelected(n: int, random: bool, lst: list):
 # b
 
 
-def fromLlistToString(lst: list):
+def fromListToString(lst: list):
     '''
     A function which convert list of strings to one string
     '''
@@ -56,31 +56,24 @@ def findMedian(dict: dict):
     return med
 
 
-def finalFunction(n: int, random: bool, lst: list):
+def dataFunction(n: int, rand: bool, lst: list):
     '''
     A function which returns all required values
     '''
-    a = wordSelected(n, random, lst)
-    b = fromLlistToString(a)
-    c = freqDict(b)
-    d = maxCharacter(c)
-    e = findMedian(c)
-    return c, d, e
+    dictofreq = freqDict(fromListToString(wordSelected(n=n,
+                                                       random=rand,
+                                                       lst=lst)))
+    max_val = maxCharacter(dictofreq)
+    median_val = findMedian(dictofreq)
+    #print(f'The frequency dictionary is: {dictofreq}\
+    #\nThe most common character is: {max_val}\
+    #\nThe median value is: {median_val}')
+    print(
+        f'''The frequency dictionary is: {dictofreq}
+        The most common character is: {max_val}
+        The median value is: {median_val}''')
 
 
 if __name__ == "__main__":
-    print(
-        "The frequency dictionary is:",
-        finalFunction(7, True, lst=[1, 2, 3, 4, 5, 6, 7])[0],
-        "\nThe most common character is:",
-        finalFunction(7, True, lst=[1, 2, 3, 4, 5, 6, 7])[1],
-        "\nThe median is:",
-        finalFunction(7, True, lst=[1, 2, 3, 4, 5, 6, 7])[2])
-    print(
-        "The frequency dictionary is:",
-        finalFunction(5, False, lst=[1, 2, 3, 4, 5, 6, 7])[0],
-        "\nThe most common character is:",
-        finalFunction(5, False, lst=[1, 2, 3, 4, 5, 6, 7])[1],
-        "\nThe median is:",
-        finalFunction(5, False, lst=[1, 2, 3, 4, 5, 6, 7])[2])
-
+    dataFunction(7, True, lst=[1, 2, 3, 4, 5, 6, 7])
+    dataFunction(5, False, lst=[1, 2, 3, 4, 5])
