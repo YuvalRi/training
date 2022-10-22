@@ -1,5 +1,5 @@
 import random as rnd
-from datastruc_ex6 import freqDict
+from datastructures.datastruc_ex6 import freqDict
 
 # ex7
 # a

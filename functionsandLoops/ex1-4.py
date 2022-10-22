@@ -1,12 +1,19 @@
-# ex1 - the function prints all the numbers from 1 to n in seperate lines and print the function's return value
+# ex1
 def func(n: int):
+    '''
+    A function which prints all the numbers from 1 to n 
+    in seperate lines and print the function's return value
+    '''
     for i in range(n):
         print(i)
     return "finished"
 
 
-# ex2 - function which prints 3 different sequences
+# ex2
 def fun(n: int):
+    '''
+    A function which prints 3 different sequences
+    '''
     # first required sequence
     print("First sequence:\n", end=" ")
     print(1, end="")
@@ -41,8 +48,13 @@ def fun(n: int):
             n2 = temp
 
 
-# ex3 palindrome desu ka?
+# ex3
+
 def pali(n: int):
+    '''
+    A function that receives a number n
+    and returns True if n is a palindrome and False otherwise
+    '''
     # a single digit number is a palindrome
     if len(str(n)) == 1:
         return True
@@ -58,6 +70,9 @@ def pali(n: int):
     # n is unnegative, but it is not a palindrome
     else:
         return False
+
+# ex 4 - main program that receives a number from the user between 1-3.
+# Each number represents one of the functions above
 
 
 if __name__ == "__main__":

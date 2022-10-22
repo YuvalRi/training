@@ -1,4 +1,4 @@
-from datastruc_ex6 import freqDict
+from datastructures.datastruc_ex6 import freqDict
 
 # ex 10
 
