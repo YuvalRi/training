@@ -29,9 +29,9 @@ def count_digit(number):
 
     
 if __name__ == "__main__":
-    #natural_recursive(8)
+    natural_recursive(8)
     #natural_backward(8)
-    print(count_digit(987632))
+    #print(count_digit(987632))
  
 
 
