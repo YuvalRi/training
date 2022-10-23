@@ -3,6 +3,7 @@
 def naturalNumbers_backward(n: int):
     '''
     A recursive function prints first n natural numbers
+    in reverse order
     '''
     if n < 1:
         print("Error: please choose a natural number.")
