@@ -3,7 +3,8 @@
 # option 1 - my implementation 
 def digit_count(n: int):
     '''
-    A recursive function which returns the digits of a given number
+    A recursive function which returns 
+    the number of digits of a given number
     '''
     count = 1
     if n < 0:
@@ -18,7 +19,8 @@ def digit_count(n: int):
 
 def count_digit(number):
     '''
-    A recursive function which returns the digits of a given number
+    A recursive function which returns 
+    the number of digits of a given number
     '''
     if number < 10 and number > -10:
         return 1
