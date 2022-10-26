@@ -1,6 +1,6 @@
 # ex 5 
 
-def spidermanSteps(n: int):
+def spiderman_steps(n: int):
     '''
     A recursive function which returns how many ways
     spiderman can climb a building
@@ -12,17 +12,17 @@ def spidermanSteps(n: int):
     elif n == 2:
         return 2
     else:
-        return spidermanSteps(n-2) + spidermanSteps(n-1)
+        return spiderman_steps(n-2) + spiderman_steps(n-1)
 
 if __name__ == "__main__":
     # we can see that from building of height 3, the ways equal to the sum 
     # of the 2 previous option of height (as Fibonacci sequence)
-    print(spidermanSteps(1))
-    print(spidermanSteps(2))
-    print(spidermanSteps(3))
-    print(spidermanSteps(4))
-    print(spidermanSteps(5))
-    print(spidermanSteps(6))
+    print(spiderman_steps(1))
+    print(spiderman_steps(2))
+    print(spiderman_steps(3))
+    print(spiderman_steps(4))
+    print(spiderman_steps(5))
+    print(spiderman_steps(6))
 
 
 

@@ -1,6 +1,6 @@
 # ex 2
 
-def naturalNumbers_backward(n: int):
+def natural_numbers_backward(n: int):
     '''
     A recursive function prints first n natural numbers
     in reverse order
@@ -10,10 +10,10 @@ def naturalNumbers_backward(n: int):
     elif n == 1:
         print(n, end = ", ")
     else:
-        naturalNumbers_backward(n-1)
+        natural_numbers_backward(n-1)
         print(n, end = ", ")
 
     
 if __name__ == "__main__":
     n = int(input("Please enter a natural number: "))
-    naturalNumbers_backward(n)
+    natural_numbers_backward(n)

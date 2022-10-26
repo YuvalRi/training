@@ -1,7 +1,7 @@
 # ex 1
 
 
-def naturalNumbers(n: int):
+def natural_numbers(n: int):
     '''
     A recursive function prints first n natural numbers
     '''
@@ -11,9 +11,9 @@ def naturalNumbers(n: int):
         print(n, end = " ")
     else:
         print(n, end = ", ")
-        naturalNumbers(n-1)
+        natural_numbers(n-1)
 
 
 if __name__ == "__main__":
     n = int(input("Please enter a natural number: "))
-    naturalNumbers(n)
+    natural_numbers(n)

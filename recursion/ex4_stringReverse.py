@@ -1,6 +1,6 @@
 # ex 4
 
-def stringReverse(str: str):
+def string_reverse(str: str):
     '''
     A recursive function which reverses a string
     '''
@@ -9,8 +9,8 @@ def stringReverse(str: str):
     elif len(str) == 1:
         return str
     else: 
-        return stringReverse(str[-(len(str)-1):]) + str[0]
+        return string_reverse(str[-(len(str)-1):]) + str[0]
 
 if __name__ == "__main__":
     str = str(input("Please enter a string: "))
-    print(stringReverse(str))
+    print(string_reverse(str))
