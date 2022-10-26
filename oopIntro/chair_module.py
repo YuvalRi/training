@@ -3,6 +3,7 @@ from ShowFunc import show
 
 # A
 
+
 class Gun:
 
     # The constructor function
@@ -15,7 +16,7 @@ class Gun:
             print("Error! Please enter a valid type of gun")
         else:
             self.model = model
-  
+
     def reload_magazine(self):
         '''
         Reload ammunition to its max capacity
@@ -43,12 +44,12 @@ class Gun:
             return True
         else:
             return False
-   
+
     def shoot(self):
         '''
         A function which cause the gun to shoot
         '''
-        if(self.ammunition != 0):
+        if (self.ammunition != 0):
             show(self)
             self.ammunition -= 1
         else:
@@ -56,13 +57,14 @@ class Gun:
 
 # B
 
+
 if __name__ == "__main__":
-    g = Gun(ammunition=0, model="Sniper") # Creating a Gun of type "Sniper" with 0 ammunition
-    g.shoot() # Trying shooting it
-    print(g.is_empty()) # Checking it is has any ammunition left, print the answer
-    g.reload_magazine() # Reloading it
-    print(g.is_empty()) # Checking if it has ammunition again, print the answer
-    g.shoot() # Shooting it
+    g = Gun(ammunition=0, model="Sniper")  # Creating g class
+    g.shoot()  # Trying shooting it
+    print(g.is_empty())  # Checking it is has any ammunition left
+    g.reload_magazine()  # Reloading it
+    print(g.is_empty())  # Checking if it has ammunition again
+    g.shoot()  # Shooting it
     # Creating a gun with invalid inputs
     g1 = Gun(ammunition=8, model="Tesla")
     g1.shoot()
