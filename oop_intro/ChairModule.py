@@ -1,4 +1,8 @@
 import time
+from oop_intro.ShowFunc import show 
+
+# A
+
 class Gun:
 
     # The constructor function
@@ -22,4 +26,14 @@ class Gun:
         if self.ammunition == 0:
             return True
     
-    def shoot
+    def shoot(self):
+        if (self.ammunition != 0):
+            show(self)
+            self.ammunition -= 1
+        else:
+            print("Error! Please enter a number between [1,6]" )
+
+
+if __name__ == "__main__":
+    g = Gun(ammunition=0, model="Sniper")
+    print(g.shoot())
