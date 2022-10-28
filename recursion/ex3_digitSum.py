@@ -33,5 +33,3 @@ if __name__ == "__main__":
     n = int(input("Please enter a number: "))
     print(digit_count(n))
     print(count_digit(n))
-
-        

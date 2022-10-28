@@ -9,7 +9,7 @@ def string_reverse(str: str):
     elif len(str) == 1:
         return str
     else: 
-        return string_reverse(str[1:(len(str))]) + str[0]
+        return string_reverse(str[1:]) + str[0]
 
 if __name__ == "__main__":
     str = str(input("Please enter a string: "))
