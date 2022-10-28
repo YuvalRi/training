@@ -1,6 +1,6 @@
 # ex 3
 
-# option 1 - my implementation 
+# option 1 - my implementation
 def digitCount(n: int):
     '''
     A recursive function which returns the digits of a given number
@@ -14,7 +14,8 @@ def digitCount(n: int):
         count = digitCount(n//10) + 1
     return count
 
-# option 2 - our implementation 
+# option 2 - our implementation
+
 
 def count_digit(number):
     '''
@@ -31,5 +32,3 @@ if __name__ == "__main__":
     n = int(input("Please enter a number: "))
     print(digitCount(n))
     print(count_digit(n))
-
-        
