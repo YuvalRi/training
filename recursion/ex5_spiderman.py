@@ -1,4 +1,4 @@
-# ex 5 
+# ex 5
 
 def spiderman_steps(n: int):
     '''
@@ -14,8 +14,9 @@ def spiderman_steps(n: int):
     else:
         return spiderman_steps(n-2) + spiderman_steps(n-1)
 
+
 if __name__ == "__main__":
-    # we can see that from building of height 3, the ways equal to the sum 
+    # we can see that from building of height 3, the ways equal to the sum
     # of the 2 previous option of height (as Fibonacci sequence)
     print(spiderman_steps(1))
     print(spiderman_steps(2))
@@ -23,8 +24,4 @@ if __name__ == "__main__":
     print(spiderman_steps(4))
     print(spiderman_steps(5))
     print(spiderman_steps(6))
-
-
-
-
 

@@ -15,7 +15,8 @@ def digit_count(n: int):
         count = digit_count(n//10) + 1
     return count
 
-# option 2 - our implementation 
+# option 2 - our implementation
+
 
 def count_digit(number):
     '''
