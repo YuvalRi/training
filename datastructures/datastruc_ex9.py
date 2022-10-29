@@ -19,4 +19,3 @@ if __name__ == "__main__":
     print(dimenstionaList(4, 5))
     print(dimenstionaList(18, 5))
     print(dimenstionaList(2, 3))
-

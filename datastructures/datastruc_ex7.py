@@ -66,10 +66,6 @@ def dataFunction(n: int, rand: bool, lst: list):
     print(f'The frequency dictionary is: {dictofreq}\
     \nThe most common character is: {maxCharacter(dictofreq)}\
     \nThe median value is: {findMedian(dictofreq)}')
-    #print(
-        #f'''The frequency dictionary is: {dictofreq}
-        #The most common character is: {maxCharacter(dictofreq)}
-        #The median value is: {findMedian(dictofreq)}''')
 
 
 if __name__ == "__main__":

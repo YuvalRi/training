@@ -38,4 +38,3 @@ def taskC(A, B):
         else:
             A[key] = B[key]
     return A
-
