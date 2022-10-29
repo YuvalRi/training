@@ -9,11 +9,11 @@ class Gun:
     # The constructor function
     def __init__(self, ammunition: int, model: str):
         if ammunition < 0 or ammunition > 6:
-            print("Error! Please enter a number between [0,6]")
+            raise ValueError("Error! Please enter a number between [0,6]")
         else:
             self.ammunition = ammunition
-        if not (model == "Sniper" or model == "Assault" or model == "Automatic"):
-            print("Error! Please enter a valid type of gun")
+        if model != "Sniper" and model != "Assault" and model != "Automatic":
+            raise ValueError("Error! Please enter a valid type of gun")
         else:
             self.model = model
 
@@ -42,14 +42,13 @@ class Gun:
         '''
         if self.ammunition == 0:
             return True
-        else:
-            return False
+        return False
 
     def shoot(self):
         '''
         A function which cause the gun to shoot
         '''
-        if (self.ammunition != 0):
+        if self.ammunition != 0:
             show(self)
             self.ammunition -= 1
         else:
