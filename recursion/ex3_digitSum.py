@@ -1,9 +1,9 @@
 # ex 3
 
-# option 1 - my implementation 
+# option 1 - my implementation
 def digit_count(n: int):
     '''
-    A recursive function which returns 
+    A recursive function which returns
     the number of digits of a given number
     '''
     count = 1
@@ -20,7 +20,7 @@ def digit_count(n: int):
 
 def count_digit(number):
     '''
-    A recursive function which returns 
+    A recursive function which returns
     the number of digits of a given number
     '''
     if number < 10 and number > -10:

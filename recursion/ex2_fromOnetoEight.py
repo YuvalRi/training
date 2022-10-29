@@ -11,7 +11,8 @@ def natural_numbers_backward(n: int):
         print(n, end=", ")
     else:
         natural_numbers_backward(n-1)
-        print(n, end = ", ")
+        print(n, end=", ")
+
 
 if __name__ == "__main__":
     n = int(input("Please enter a natural number: "))

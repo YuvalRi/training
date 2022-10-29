@@ -8,9 +8,9 @@ def natural_numbers(n: int):
     if n < 1:
         print("Error: please choose a natural number.")
     elif n == 1:
-        print(n, end = " ")
+        print(n, end=" ")
     else:
-        print(n, end = ", ")
+        print(n, end=", ")
         natural_numbers(n-1)
 
 

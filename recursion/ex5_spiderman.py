@@ -24,4 +24,3 @@ if __name__ == "__main__":
     print(spiderman_steps(4))
     print(spiderman_steps(5))
     print(spiderman_steps(6))
-

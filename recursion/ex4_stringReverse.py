@@ -6,8 +6,9 @@ def string_reverse(str: str):
     '''
     if len(str) == 0:
         return str
-    else: 
+    else:
         return string_reverse(str[1:]) + str[0]
+
 
 if __name__ == "__main__":
     str = input("Please enter a string: ")
